@@ -28,6 +28,26 @@ const startGame = () => {
     }
   });
 
+  window.addEventListener("deviceorientation", function (e) {
+    const x = Math.round(e.beta);
+    const y = Math.round(e.gamma);
+    const z = Math.round(e.alpha);
+
+    if (y < -17) {
+      moveLeft();
+    }
+
+    if (y > 17) {
+      moveRight();
+    }
+
+    //Parallax Effect
+
+    // document.getElementsByClassName(
+    //   "rocket"
+    // )[0].style.transform = `translateY(-${x}%)`;
+  });
+
   // Painzzz
   var painz = document.getElementById("painz");
   let counter = 0;
