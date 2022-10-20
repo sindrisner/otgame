@@ -33,7 +33,7 @@ window.addEventListener("deviceorientation", function (e) {
   const y = Math.round(e.gamma);
   const z = Math.round(e.alpha);
 
-  if (y < 17 && y < 20) {
+  if (y < 17 && y > 20) {
     moveLeft();
   }
 
