@@ -33,11 +33,11 @@ window.addEventListener("deviceorientation", function (e) {
   const y = Math.round(e.gamma);
   const z = Math.round(e.alpha);
 
-  if (y < 17 && y > 20) {
+  if (y < -17) {
     moveLeft();
   }
 
-  if (y > 17) {
+  if (y < 17 && y > 20) {
     moveRight();
   }
 
@@ -125,14 +125,3 @@ setInterval(() => {
   }
 }, 100);
 // };
-window.addEventListener("deviceorientation", function (e) {
-  const x = Math.round(e.beta);
-  const y = Math.round(e.gamma);
-  const z = Math.round(e.alpha);
-
-  document.getElementsByClassName("xtxt")[0].innerText = "X-Axis = " + x;
-  document.getElementsByClassName("ytxt")[0].innerText = "Y-Axis = " + y;
-  document.getElementsByClassName("ztxt")[0].innerText = "Z-Axis = " + z;
-
-  //Parallax Effect
-});
