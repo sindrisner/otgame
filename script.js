@@ -28,17 +28,37 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const moveRightGeo = (number) => {
+  let left = parseInt(
+    window.getComputedStyle(character).getPropertyValue("left")
+  );
+  left += number * 2.4;
+  if (left < 600 * 2.4) {
+    character.style.left = left + "px";
+  }
+};
+
+const moveLeftGeo = (number) => {
+  let left = parseInt(
+    window.getComputedStyle(character).getPropertyValue("left")
+  );
+  left -= number * 2.4;
+  if (left >= 0) {
+    character.style.left = left + "px";
+  }
+};
+
 window.addEventListener("deviceorientation", function (e) {
   const x = Math.round(e.beta);
   const y = Math.round(e.gamma);
   const z = Math.round(e.alpha);
 
   if (y < -17) {
-    moveLeft();
+    moveLeftGeo(y);
   }
 
   if (y > 17) {
-    moveRight();
+    moveRightGeo(y);
   }
 
   //Parallax Effect
