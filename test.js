@@ -8,8 +8,4 @@ window.addEventListener("deviceorientation", function (e) {
   document.getElementsByClassName("ztxt")[0].innerText = "Z-Axis = " + z;
 
   //Parallax Effect
-
-  document.getElementsByClassName(
-    "rocket"
-  )[0].style.transform = `translateY(-${x}%)`;
 });
