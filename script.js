@@ -32,7 +32,7 @@ const moveRightGeo = (number) => {
   let left = parseInt(
     window.getComputedStyle(character).getPropertyValue("left")
   );
-  left += number * 2.4;
+  left += 100 * 2.4;
   if (left < 600 * 2.4) {
     character.style.left = left + "px";
   }
@@ -42,7 +42,7 @@ const moveLeftGeo = (number) => {
   let left = parseInt(
     window.getComputedStyle(character).getPropertyValue("left")
   );
-  left -= number * 2.4;
+  left -= 100 * 2.4;
   if (left >= 0) {
     character.style.left = left + "px";
   }
