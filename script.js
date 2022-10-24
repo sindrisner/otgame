@@ -53,7 +53,7 @@ window.addEventListener("deviceorientation", function (e) {
   const y = Math.round(e.gamma);
   const z = Math.round(e.alpha);
 
-  // moveRightGeo(y);
+  moveRightGeo(y);
 
   //Parallax Effect
 
