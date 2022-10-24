@@ -43,7 +43,7 @@ const moveRightGeo = (number) => {
     window.getComputedStyle(character).getPropertyValue("left")
   );
   left += number;
-  if (left < 600 * 2.4) {
+  if (left < 500 * 2.4) {
     character.style.left = left + "px";
   }
 };
