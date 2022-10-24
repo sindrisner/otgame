@@ -66,7 +66,7 @@ window.addEventListener("deviceorientation", function (e) {
 var painz = document.getElementById("painz");
 let counter = 0;
 let gainzz = 0;
-document.getElementById("painz").style.animation = "slide2 1.5s infinite";
+document.getElementById("painz").style.animation = "slide2 3s infinite";
 
 painz.addEventListener("animationiteration", () => {
   var colors = [
