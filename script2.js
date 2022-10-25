@@ -43,9 +43,9 @@ const moveRightGeo = (number) => {
     window.getComputedStyle(character).getPropertyValue("left")
   );
   left += number;
-  if (left >= 200 && left < 600) {
-    character.style.left = left + "px";
-  }
+  // if (left >= 200 && left < 600) {
+  character.style.left = left + "px";
+  // }
 };
 
 window.addEventListener("deviceorientation", function (e) {
